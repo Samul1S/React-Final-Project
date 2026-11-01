@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 
 export default function ContactDetails({ contacts }) {
-  const { id } = useParams(); // Haetaan ID URL-osoitteesta
+  const { id } = useParams(); 
   const contact = contacts.find(c => c.id === id);
 
   if (!contact) {

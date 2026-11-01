@@ -9,10 +9,10 @@ export default function AddContact({ onAdd }) {
     e.preventDefault();
     const newContact = {
       ...formData,
-      id: Date.now().toString() // Luodaan uniikki ID aikaleimasta
+      id: Date.now().toString()
     };
     onAdd(newContact);
-    navigate('/contacts'); // Ohjataan onnistuneen lisäyksen jälkeen listaan
+    navigate('/contacts'); n
   };
 
   const handleChange = (e) => {

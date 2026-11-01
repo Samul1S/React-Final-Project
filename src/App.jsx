@@ -9,20 +9,16 @@ import ContactDetails from './components/ContactDetails';
 import { initialContacts } from './data/initialContacts';
 
 function App() {
-  // Tilanhallinta, alustetaan tiedostosta tuodulla datalla
   const [contacts, setContacts] = useState(initialContacts);
 
-  // Funktio uuden kontaktin lisäämiseen
   const addContact = (newContact) => {
     setContacts([...contacts, newContact]);
   };
 
-  // Funktio kontaktin poistamiseen (Bonus)
   const deleteContact = (id) => {
     setContacts(contacts.filter(contact => contact.id !== id));
   };
 
-  // Funktio kontaktin muokkaamiseen (Bonus)
   const editContact = (updatedContact) => {
     setContacts(contacts.map(contact => 
       contact.id === updatedContact.id ? updatedContact : contact
